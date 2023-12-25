@@ -12,7 +12,8 @@ namespace RecommendationSystemApi.Models
         public string SpokenLanguagesId { get; set; } // A unique identifier for the spoken language, typically an ISO language code
         public string Name { get; set; } // The full name of the spoken language
 
-        // Additional methods or properties as needed
+        //// Additional methods or properties as needed
+        //public MovieMetadata Movie { get; set; }
     }
 
 }

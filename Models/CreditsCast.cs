@@ -17,7 +17,7 @@ namespace RecommendationSystemApi.Models
         public int Order { get; set; } // Order of appearance or importance
         public string ProfilePath { get; set; } // URL or path to the profile image
         public int MovieId { get; set; } // The ID of the movie they are associated with
-
+        //public MovieMetadata Movie { get; set; }
 
     }
 

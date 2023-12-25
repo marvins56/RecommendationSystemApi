@@ -13,7 +13,7 @@
         public bool Adult { get; set; }
         public long Budget { get; set; }
         public string Homepage { get; set; }
-        public int MovieId { get; set; }
+       
         public string ImdbId { get; set; }
         public string OriginalLanguage { get; set; }
         public string OriginalTitle { get; set; }
@@ -30,7 +30,16 @@
         public double VoteAverage { get; set; }
         public double VoteCount { get; set; }
 
-        
+        public int MovieId { get; set; }
+
+        //// Navigation properties for related entities
+        //public List<Rating> Ratings { get; set; }
+        //public List<SpokenLanguage> SpokenLanguages { get; set; }
+        //public List<ProductionCountry> ProductionCountries { get; set; }
+        //public List<ProductionCompany> ProductionCompanies { get; set; }
+        //public List<Genre> Genres { get; set; }
+        //public List<ExpandedKeyword> Keywords { get; set; }
+        //public List<CreditsCrew> CreditsCrew { get; set; }
     }
 
 }

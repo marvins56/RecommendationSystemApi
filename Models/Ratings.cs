@@ -21,6 +21,8 @@
         public DateTime RatingDateTime => DateTimeOffset.FromUnixTimeSeconds(Timestamp).DateTime;
 
         // Additional methods or properties as needed
+
+        //public MovieMetadata Movie { get; set; }
     }
 
 }

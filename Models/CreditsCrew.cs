@@ -7,7 +7,8 @@ namespace RecommendationSystemApi.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int DbId { get; set; }
+        public int MovieId { get; set; } // The ID of the movie they are associated with
         public string CreditId { get; set; }
         public string Department { get; set; }
         public int Gender { get; set; } // Assuming 1 for female, 2 for male, 0 for unspecified
@@ -15,9 +16,8 @@ namespace RecommendationSystemApi.Models
         public string Name { get; set; }
         public string ProfilePath { get; set; } // URL or path to the profile image
         public int CrewId { get; set; } // Unique identifier for the crew member
-        public int MovieId { get; set; } // The ID of the movie they are associated with
-
-        // Additional methods or properties as needed
+    
+        
     }
 
 }

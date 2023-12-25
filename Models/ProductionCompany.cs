@@ -14,6 +14,7 @@ namespace RecommendationSystemApi.Models
         public string Name { get; set; } // Name of the production company
 
         // Additional methods or properties as needed
+        //public MovieMetadata Movie { get; set; }
     }
 
 }

@@ -17,7 +17,7 @@
 
         // Converts the Unix timestamp to a DateTime object
         public DateTime RatedAt => DateTimeOffset.FromUnixTimeSeconds(Timestamp).DateTime;
-
+        //public MovieMetadata Movie { get; set; }
         // Additional methods or properties as needed
     }
 

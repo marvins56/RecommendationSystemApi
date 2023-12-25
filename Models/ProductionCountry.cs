@@ -14,6 +14,8 @@ namespace RecommendationSystemApi.Models
         public string Name { get; set; } // The full name of the production country
 
         // Additional methods or properties as needed
+
+        //public MovieMetadata Movie { get; set; }
     }
 
 }

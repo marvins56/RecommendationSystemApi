@@ -20,74 +20,58 @@
         public DbSet<MovieLink> MovieLinks { get; set; }
         public DbSet<MovieLinksSmall> MovieLinksSmall { get; set; }
         public DbSet<SpokenLanguage> SpokenLanguages { get; set; }
-        public DbSet<CreditsCrew> CastCrew { get; set; }
+ 
         public DbSet<CreditsCrew> CreditsCrew { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //// MovieMetadata to Rating (One-to-Many)
+            //modelBuilder.Entity<MovieMetadata>()
+            //    .HasMany(m => m.Ratings)
+            //    .WithOne(r => r.Movie)
+            //    .HasForeignKey(r => r.MovieId);
+
+            //// MovieMetadata to SpokenLanguage (One-to-Many)
+            //modelBuilder.Entity<MovieMetadata>()
+            //    .HasMany(m => m.SpokenLanguages)
+            //    .WithOne(sl => sl.Movie)
+            //    .HasForeignKey(sl => sl.MovieId);
+
+            //// MovieMetadata to ProductionCountry (One-to-Many)
+            //modelBuilder.Entity<MovieMetadata>()
+            //    .HasMany(m => m.ProductionCountries)
+            //    .WithOne(pc => pc.Movie)
+            //    .HasForeignKey(pc => pc.MovieId);
+
+            //// MovieMetadata to ProductionCompany (One-to-Many)
+            //modelBuilder.Entity<MovieMetadata>()
+            //    .HasMany(m => m.ProductionCompanies)
+            //    .WithOne(pc => pc.Movie)
+            //    .HasForeignKey(pc => pc.MovieId);
+
+            //// MovieMetadata to Genre (One-to-Many)
+            //modelBuilder.Entity<MovieMetadata>()
+            //    .HasMany(m => m.Genres)
+            //    .WithOne(g => g.Movie)
+            //    .HasForeignKey(g => g.MovieId);
+
+            //// MovieMetadata to ExpandedKeyword (One-to-Many)
+            //modelBuilder.Entity<MovieMetadata>()
+            //    .HasMany(m => m.Keywords)
+            //    .WithOne(k => k.Movie)
+            //    .HasForeignKey(k => k.MovieId);
+
+            ////// MovieMetadata to CreditsCrew (One-to-Many)
+            ////modelBuilder.Entity<MovieMetadata>()
+            ////    .HasMany(m => m.CreditsCrew)
+            ////    .WithOne(cc => cc.Movie)
+            ////    .HasForeignKey(cc => cc.MovieId);
+
+
+            //// Specify other relationships here
+
             base.OnModelCreating(modelBuilder);
-
-            //      // Configure MovieMetadata entity
-            //      modelBuilder.Entity<MovieMetadata>()
-            //          .HasKey(m => m.DbId);
-
-            //      // Configure one-to-many relationships
-            //      modelBuilder.Entity<MovieMetadata>()
-            //          .HasMany(m => m.ProductionCompanies)
-            //          .WithOne(pc => pc.MovieMetadata)
-            //          .HasForeignKey(pc => pc.MovieId);
-
-            //      modelBuilder.Entity<MovieMetadata>()
-            //          .HasMany(m => m.ProductionCountries)
-            //          .WithOne(pc => pc.MovieMetadata)
-            //          .HasForeignKey(pc => pc.MovieId);
-
-            //      modelBuilder.Entity<MovieMetadata>()
-            //          .HasMany(m => m.Genres)
-            //          .WithOne(g => g.MovieMetadata)
-            //          .HasForeignKey(g => g.MovieId);
-
-            //      modelBuilder.Entity<MovieMetadata>()
-            //          .HasMany(m => m.SpokenLanguages)
-            //          .WithOne(sl => sl.MovieMetadata)
-            //          .HasForeignKey(sl => sl.MovieId);
-
-            //      modelBuilder.Entity<MovieMetadata>()
-            //          .HasMany(m => m.ExpandedKeywords)
-            //          .WithOne(ek => ek.MovieMetadata)
-            //          .HasForeignKey(ek => ek.MovieId);
-
-            //      modelBuilder.Entity<MovieMetadata>()
-            //          .HasMany(m => m.CreditsCrew)
-            //          .WithOne(cc => cc.MovieMetadata)
-            //          .HasForeignKey(cc => cc.MovieId);
-
-            //      modelBuilder.Entity<MovieMetadata>()
-            //          .HasMany(m => m.CreditsCrew)
-            //          .WithOne(cc => cc.MovieMetadata)
-            //          .HasForeignKey(cc => cc.MovieId);
-
-            //      modelBuilder.Entity<MovieMetadata>()
-            //          .HasMany(m => m.RatingsSmall)
-            //          .WithOne(rs => rs.MovieMetadata)
-            //          .HasForeignKey(rs => rs.MovieId);
-
-            //      modelBuilder.Entity<MovieLink>()
-            //.HasOne(ml => ml.MovieMetadata)
-            //.WithMany(mm => mm.MovieLinks)
-            //.HasForeignKey(ml => ml.MovieId); // Ensure types match here
-
-
-            //      modelBuilder.Entity<MovieMetadata>()
-            //          .HasOne(m => m.MovieLinksSmall)
-            //          .WithOne(mls => mls.MovieMetadata)
-            //          .HasForeignKey<MovieLinksSmall>(mls => mls.MovieId);
-            //  }
-
-
-
-            // ... Additional context methods and configurations
         }
     }
 

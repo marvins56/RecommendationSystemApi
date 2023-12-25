@@ -12,7 +12,7 @@ namespace RecommendationSystemApi.Models
         public int MovieId { get; set; } // Internal unique identifier for a movie
         public string ImdbId { get; set; } // The IMDb ID as a string (since it starts with 'tt')
         public int TmdbId { get; set; } // The TMDb ID as an integer
-
+        //public MovieMetadata Movie { get; set; }
     }
 
 }

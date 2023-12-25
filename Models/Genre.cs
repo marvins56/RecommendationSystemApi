@@ -11,9 +11,10 @@ namespace RecommendationSystemApi.Models
         public int MovieId { get; set; } // ID of the entity (e.g., movie) associated with the genre
         public int GenreId { get; set; } // Unique identifier for the genre
         public string Name { get; set; } // Name of the genre
-
-
-        // Additional methods or properties as needed
+        //public MovieMetadata Movie { get; set; }
     }
 
+    // Additional methods or properties as needed
 }
+
+
