@@ -235,7 +235,7 @@ namespace RecommendationSystemApi.Services
                             .Where(r => r.MovieId == m.MovieId)
                             .Average(r => r.RatingValue) >= query.MinRating && // Filter by ratings
                         m.MovieId != baseMovie.MovieId) // Exclude the base movie
-                    .OrderByDescending(m => _context.Ratings
+                    .OrderByDescending(m => _context.Set<Rating>()
                         .Where(r => r.MovieId == m.MovieId)
                         .Average(r => r.RatingValue))
                     .Take(query.MaxResults > 0 ? query.MaxResults : 10)
